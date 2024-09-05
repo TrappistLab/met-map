@@ -26,13 +26,15 @@ const geocoder = L.Control.geocoder({
     defaultMarkGeocode: false
 })
 .on('markgeocode', function(e) {
+    console.log(e.geocode.name)
+    console.log(e)
     const bbox = e.geocode.bbox;
     const poly = L.polygon([
         bbox.getSouthEast(),
         bbox.getNorthEast(),
         bbox.getNorthWest(),
         bbox.getSouthWest()
-    ]).addTo(map);
+    ])
     map.fitBounds(poly.getBounds());
 })
 .addTo(map);
