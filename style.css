@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #1d0fdaef;
+    color: rgb(250, 250, 250);
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header img {
+    height: 50px;
+    margin-block-end: 15px;
+    align-self: flex-start;
+}
+#map {
+    height: 100vh;
+    width: 100%;
+    height: calc(100% - 95px);
+}
+.coordinate {
+    padding: 10px;
+    font-size: 16px;
+    background: rgba(5, 5, 5, 0.123);
+    position: absolute;
+    bottom: 10px;
+    left: 900px;
+    z-index: 1000;
+}
