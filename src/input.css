@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; 
+}
+header {
+    background-color: #ffffff;
+    color: rgb(250, 250, 250);
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.iimage {
+    height: 40px;
+
+    margin-block-end: 15px;
+    align-self: flex-start;
+}
+#map{
+    width: 100%;
+    height: 100vh;
+    /* z-index: -1; */
+}
+.coordinate {
+    padding: 10px;
+    font-size: 16px;
+    background: rgba(5, 5, 5, 0.164);
+    position: absolute;
+    bottom: 10px;
+    left: 900px;
+    z-index: 1000;
+}

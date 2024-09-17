@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map for Climate in Africa Station</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/franken-ui@1.0.0/dist/js/core.iife.js" type="module"></script>
+    <script src="https://unpkg.com/franken-ui@1.0.0/dist/js/icon.iife.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <header class="border-b ">
+        <img src="../public/image.png" alt="Logo">
+        Interactive Map for Climate in Africa Stations
+    </header> -->
+    <div id="map"></div>
+
+    <div class="coordinate"></div>
+    <div class="flex flex-col  py-5 px-5 h-[calc(100vh-80px)] min-w-[200px] w-[400px] absolute left-16 top-10 bg-white rounded-2xl max-sm:h-[50%]" style="z-index: 1000;">
+        <img class="iimage flex mx-auto" src="../public/image.png" alt="Logo">    
+        <h1 class="flex mx-auto text-md font-bold text-xl mt-2 mb-6">Weather stations across Africa</h1>
+
+        <dl class="uk-description-list uk-description-list-divider">
+            <!-- <span class="rounded-full bg-gray-500">CU</span> -->
+            <dt>Description term</dt>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+            <dt>Description term</dt>
+            <dd>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            </dd>
+            <dt>Description term</dt>
+            <dd>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            </dd>
+          </dl>
+          <pre id="output"></pre>
+          <button class="uk-width-1-1 uk-button uk-button-primary uk-margin-small-bottom" id="asomehtkgf">
+            Button
+          </button>
+    </div>
+    
+   
+
+
+
+    <!-- <div>  
+        <button
+        class="uk-button uk-button-default bottom-10 right-10 absolute shadow-2xl"
+        type="button"
+        uk-toggle="target: #offcanvas-usage"
+        >
+        See all stations
+    </button>
+
+    <a href="#offcanvas-usage" uk-toggle></a>
+
+    <div id="offcanvas-usage" uk-offcanvas>
+    <div class="uk-offcanvas-bar uk-padding">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+        </p>
+    </div> -->
+
+    </div>
+
+
+   
+
+
+
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    <script src="app.js"></script>
+    <script src="map.js"></script> 
+</body>
+</html>
