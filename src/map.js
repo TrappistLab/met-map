@@ -21,6 +21,50 @@ const baseLayers = {
 
 const markersLayer = L.layerGroup();
 
+// Add GeoJSON boundaries
+fetch('../public/africa_countries.geojson')
+.then(response => response.json())
+.then(data => {
+    const countryLayer = L.geoJSON(data, {
+        style: function(feature) {
+            return { color: "#3388ff", weight: 2, fillOpacity: 0 };
+        },
+        onEachFeature: function(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map.fitBounds(e.target.getBounds());
+                }
+            });
+        }
+    }).addTo(map);
+
+    // Update overlay layers
+    const overlayLayers = {
+        "Weather Station": markersLayer,
+        "Country Boundaries": countryLayer
+    };
+
+    L.control.layers(baseLayers, overlayLayers).addTo(map);
+});
+
+// Add draw control
+const drawControl = new L.Control.Draw({
+    draw: { 
+        polygon: true, 
+        polyline: true, 
+        marker: true },
+    edit: { 
+        featureGroup: markersLayer, 
+        remove: true }
+});
+
+// Handle drawing
+map.on(L.Draw.Event.CREATED, function (e) {
+    const layer = e.layer;
+    layer.addTo(markersLayer);
+});
+
+
 // Add search control
 const geocoder = L.Control.geocoder({
     defaultMarkGeocode: false
@@ -55,8 +99,6 @@ const customMarkerIcon = L.icon({
 
 });
 
-
-
 var stations
 
 // Fetch the CSV file from the public folder
@@ -84,11 +126,15 @@ fetch('../public/african_stations_positions_addresses.csv')
     console.error('Error fetching the CSV file:', error);
 });
 
-
-
-
-
-
+// Event listener to show boundaries when zooming in
+map.on('zoomend', function() {
+    const currentZoom = map.getZoom();
+    if (currentZoom > 5 && countryLayer) {
+        map.addLayer(countryLayer); // Add boundaries when zoomed in
+    } else if (currentZoom <= 5 && countryLayer) {
+        map.removeLayer(countryLayer); // Remove boundaries when zoomed out
+    }
+});
 
 // Add the markersLayer to the map and the layer control
 markersLayer.addTo(map);
