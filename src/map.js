@@ -83,8 +83,6 @@ const geocoder = L.Control.geocoder({
 })
 .addTo(map);
 
-
-
 // Add markers for different locations in Africa
 
 // Define a custom icon with a modified size
