@@ -13,7 +13,7 @@
 
 ## Features
 
-- Interactive weather map with heatmap visualization
+- Interactive in-situ weather map visualization
 - FastAPI backend for handling data processing and API requests
 - Leaflet.js frontend for map rendering and interaction
 - Customizable overlays with location markers and weather details
