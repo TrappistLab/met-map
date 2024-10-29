@@ -1,6 +1,6 @@
 # MET-Map
 
-**MET-Map** is a meteorological map visualization tool designed to simplify the display and analysis of meteorological data. Built with [Leaflet.js](https://leafletjs.com/) and [FastAPI](https://fastapi.tiangolo.com/), this project supports heatmap visualization, weather overlays, and customizable interactive maps to assist researchers, meteorologists, and developers.
+**MET-Map** is a meteorological map visualization tool designed to simplify the display and analysis of meteorological data. Built with [`Leaflet.js`](https://leafletjs.com/) and [`FastAPI`](https://fastapi.tiangolo.com/), this project supports heatmap visualization, weather overlays, and customizable interactive maps to assist researchers, meteorologists, and developers.
 
 ## Table of Contents
 
