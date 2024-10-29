@@ -14,17 +14,17 @@
 ## Features
 
 - Interactive in-situ weather map visualization
-- FastAPI backend for handling data processing and API requests
-- Leaflet.js frontend for map rendering and interaction
+- `FastAPI` backend for handling data processing and API requests
+- `Leaflet.js` frontend for map rendering and interaction
 - Customizable overlays with location markers and weather details
-- Support for GeoJSON and JSON files for data representation
+- Support for `GeoJSON` and `JSON` files for data representation
 
 ## Installation
 
 ### Prerequisites
 
-- [Python 3.8+](https://www.python.org/downloads/)
-- [Node.js & npm](https://nodejs.org/en/download/) (for frontend dependencies)
+- [`Python 3.8+`](https://www.python.org/downloads/)
+- [`Node.js` & `npm`](https://nodejs.org/en/download/) (for frontend dependencies)
 
 ### Clone the repository
 
