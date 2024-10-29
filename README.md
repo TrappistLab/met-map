@@ -33,7 +33,7 @@ git clone https://github.com/TrappistLab/met-map.git
 cd met-map
 ```
 
-### Backend Setup (FastAPI)
+## Backend Setup (FastAPI)
 
 1. **Create a virtual environment:**
    ```bash
